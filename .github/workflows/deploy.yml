@@ -24,6 +24,16 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
+      - name: Verify index.html exists (Challenge)
+        run: |
+          echo "🔍 Checking for index.html..."
+          if test -f index.html; then
+            echo "✅ index.html found successfully!"
+          else
+            echo "❌ Error: index.html is missing in the repository root!" >&2
+            exit 1
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

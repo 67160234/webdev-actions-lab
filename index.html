@@ -1,18 +1,334 @@
 <!doctype html>
-<html lang="th">
+<html lang="th" data-theme="green-dominant">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Pages Lab</title>
+  <title>Ratchcta Wongsakhu | WebDev & Actions Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="card">
-    <h1>This is my work</h1>
-    <p>ชื่อ: Ratchcta Wongsakhu | รหัสนิสิต: 67160234</p>
-    <p id="status">Ready to deploy</p>
-    <button id="helloBtn">Say Hello</button>
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-right" aria-hidden="true"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-accent">&lt;</span>Ratchcta<span class="logo-accent">/&gt;</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">หน้าหลัก</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#automation">Workflow CI/CD</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn btn-secondary btn-sm" aria-label="สลับธีม">
+          <span class="btn-icon">⚡</span>
+          <span class="btn-label">สลับธีมสี</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-container">
+    <header class="hero-section" id="hero">
+      <div class="badge-pill">
+        <span class="status-indicator"></span>
+        <span>Web Development &amp; GitHub Actions Lab</span>
+      </div>
+
+      <h1 class="hero-title">
+        ยินดีต้อนรับสู่โปรไฟล์ของ <br>
+        <span class="gradient-text">Ratchcta Wongsakhu</span>
+      </h1>
+
+      <div class="student-meta">
+        <div class="meta-tag">
+          <span class="meta-icon">👤</span>
+          <span class="meta-label">ชื่อ-นามสกุล:</span>
+          <strong>Ratchcta Wongsakhu</strong>
+        </div>
+        <div class="meta-tag">
+          <span class="meta-icon">🎓</span>
+          <span class="meta-label">รหัสนิสิต:</span>
+          <strong class="highlight-code">67160234</strong>
+        </div>
+      </div>
+
+      <div class="welcome-box">
+        <p id="welcomeMsg" class="welcome-text">
+          👋 สวัสดีครับ! ยินดีต้อนรับสู่หน้าเว็บไซต์ Portfolio &amp; CI/CD Deployment Showcase
+        </p>
+        <div class="status-wrapper">
+          <span class="status-badge" id="status">● System Status: Ready to deploy</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <button id="helloBtn" class="btn btn-primary">
+          <span class="btn-icon">💬</span>
+          <span id="helloBtnText">เปลี่ยนข้อความต้อนรับ</span>
+        </button>
+        <button id="themeActionBtn" class="btn btn-outline">
+          <span class="btn-icon">🎨</span>
+          <span>สลับโหมดสี (เขียว ⟷ ม่วง)</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="section-card" id="about">
+      <div class="section-header">
+        <span class="section-badge">Part 01</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">ข้อมูลแนะนำตัว ประวัติการศึกษา และความสนใจ</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio-card">
+          <h3>เกี่ยวกับตัวฉัน</h3>
+          <p class="bio-text">
+            สวัสดีครับ ผมชื่อ <strong>Ratchcta Wongsakhu</strong> รหัสนิสิต <strong>67160234</strong>
+            กำลังศึกษาอยู่ มหาวิทยาลัยบูรพา คณะวิทยาการสารสนเทศ สาขาปัญญาประดิษฐ์ประยุกต์และเทคโนโลยีอัจฉริยะ
+            มีความสนใจและมุ่งมั่นในการเรียนรู้การพัฒนาเว็บสมัยใหม่ (Modern Web Development) และระบบ DevOps Automation
+            ด้วย GitHub Actions
+          </p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">มหาวิทยาลัย / คณะ:</span>
+              <span class="info-value">คณะวิทยาการสารสนเทศ (กรอกข้อมูลเพิ่มเติมที่นี่)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">ความสนใจพิเศษ:</span>
+              <span class="info-value">Full-Stack Development, CI/CD Pipeline, Cloud Computing</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">คติประจำใจ / เป้าหมาย:</span>
+              <span class="info-value">"Never stop learning and building great things."</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-highlights-card">
+          <h3>จุดเด่น &amp; จุดมุ่งหมาย</h3>
+          <div class="highlight-items">
+            <div class="highlight-box">
+              <div class="hl-number">01</div>
+              <div>
+                <h4>Continuous Learning</h4>
+                <p>พร้อมเรียนรู้เทคโนโลยีใหม่ๆ อยู่เสมอ ทั้ง Frontend, Backend และ Workflow Tools</p>
+              </div>
+            </div>
+            <div class="highlight-box">
+              <div class="hl-number">02</div>
+              <div>
+                <h4>Problem Solving</h4>
+                <p>ชอบการคิดวิเคราะห์ แก้ไขปัญหา และค้นหาวิธีการทำงานที่รวดเร็วและมีประสิทธิภาพ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-card" id="skills">
+      <div class="section-header">
+        <span class="section-badge">Part 02</span>
+        <h2 class="section-title">Skills &amp; Competencies</h2>
+        <p class="section-subtitle">ทักษะความสามารถด้านเทคนิค เครื่องมือ และภาษาที่ใช้งาน</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category-card">
+          <div class="category-icon green-glow">💻</div>
+          <h3>Frontend Development</h3>
+          <p class="category-desc">การพัฒนาหน้าเว็บและส่วนติดต่อผู้ใช้งาน</p>
+          <div class="skill-chips">
+            <span class="chip chip-green">HTML5</span>
+            <span class="chip chip-green">CSS3 / Vanilla CSS</span>
+            <span class="chip chip-green">JavaScript (ES6+)</span>
+            <span class="chip chip-green">Responsive Design</span>
+            <span class="chip chip-placeholder">+ เพิ่มทักษะของคุณ</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-icon purple-glow">⚙️</div>
+          <h3>DevOps &amp; Workflow Tools</h3>
+          <p class="category-desc">เครื่องมือจัดการโค้ดและการส่งมอบงานแบบอัตโนมัติ</p>
+          <div class="skill-chips">
+            <span class="chip chip-purple">Git &amp; GitHub</span>
+            <span class="chip chip-purple">GitHub Actions (CI/CD)</span>
+            <span class="chip chip-purple">GitHub Pages</span>
+            <span class="chip chip-purple">Bash / Shell Scripting</span>
+            <span class="chip chip-placeholder">+ เพิ่มเครื่องมือของคุณ</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-icon green-glow">🚀</div>
+          <h3>Soft Skills &amp; Practices</h3>
+          <p class="category-desc">ทักษะการทำงานร่วมกับผู้อื่นและการเรียนรู้</p>
+          <div class="skill-chips">
+            <span class="chip chip-green">Version Control Workflow</span>
+            <span class="chip chip-purple">Problem Solving</span>
+            <span class="chip chip-green">Team Collaboration</span>
+            <span class="chip chip-purple">Agile Mindset</span>
+            <span class="chip chip-placeholder">+ เพิ่มเติมที่นี่</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card" id="contact">
+      <div class="section-header">
+        <span class="section-badge">Part 03</span>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">ช่องทางการติดต่อและเชื่อมต่อเครือข่าย</p>
+      </div>
+
+      <div class="contact-grid">
+        <a href="mailto:67160234@go.buu.ac.th" class="contact-card">
+          <div class="contact-icon purple-glow">📧</div>
+          <div class="contact-content">
+            <span class="contact-label">อีเมล (Email)</span>
+            <strong class="contact-value">67160234@go.buu.ac.th</strong>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon green-glow">🐙</div>
+          <div class="contact-content">
+            <span class="contact-label">GitHub Profile</span>
+            <strong class="contact-value">github.com/ratchcta-67160234</strong>
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+
+        <div class="contact-card">
+          <div class="contact-icon purple-glow">💬</div>
+          <div class="contact-content">
+            <span class="contact-label">ช่องทางติดต่ออื่นๆ (Social / Discord)</span>
+            <strong class="contact-value">Line / Discord ID: buomman007</strong>
+          </div>
+          <span class="contact-arrow">✎</span>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon green-glow">📍</div>
+          <div class="contact-content">
+            <span class="contact-label">ที่อยู่ / สถานศึกษา</span>
+            <strong class="contact-value">ชลบุรี, ประเทศไทย</strong>
+          </div>
+          <span class="contact-arrow">★</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card automation-card" id="automation">
+      <div class="section-header">
+        <span class="section-badge badge-purple">Exercise 4 &amp; Challenge</span>
+        <h2 class="section-title">Automation &amp; CI/CD Pipeline Analysis</h2>
+        <p class="section-subtitle">คำอธิบายการทำงานของ GitHub Actions Workflow ด้วยภาษาของตนเอง</p>
+      </div>
+
+      <div class="workflow-explanation-grid">
+        <div class="workflow-box trigger-box">
+          <div class="box-badge">Question 1</div>
+          <div class="box-header">
+            <span class="box-icon">⚡</span>
+            <h3>Workflow จะเริ่มต้นทำงานเมื่อใด?</h3>
+          </div>
+          <div class="box-body">
+            <p>
+              ไฟล์การตั้งค่า <code>deploy.yml</code> กำหนดให้ Workflow ทำงานตามเงื่อนไข (Triggers) 2 กรณี ได้แก่:
+            </p>
+            <ul class="explain-list">
+              <li>
+                <strong>1. เมื่อมีการ Push โค้ดขึ้นไปที่ Branch <code>main</code> (อัตโนมัติ):</strong>
+                เมื่อเราทำคำสั่ง <code>git commit</code> และ <code>git push origin main</code> ระบบ GitHub
+                จะดักจับเหตุการณ์นี้ แล้วเริ่มรันขั้นตอน Deploy ให้ทันทีโดยไม่ต้องทำด้วยมือ
+              </li>
+              <li>
+                <strong>2. เมื่อสั่งรันด้วยตนเอง (Manual Trigger ผ่าน <code>workflow_dispatch</code>):</strong>
+                สามารถกดปุ่ม <em>"Run workflow"</em> บนแถบ GitHub Actions ในเว็บไซต์ GitHub เพื่อสั่งให้ Deploy
+                ใหม่ได้ทุกเวลาที่ต้องการ
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="workflow-box deploy-box">
+          <div class="box-badge">Question 2</div>
+          <div class="box-header">
+            <span class="box-icon">🚀</span>
+            <h3>Job "deploy" ทำหน้าที่อะไรบ้าง?</h3>
+          </div>
+          <div class="box-body">
+            <p>
+              Job <code>deploy</code> จะเริ่มทำงานบนเครื่องจำลองระบบปฏิบัติการ <strong>Ubuntu (ubuntu-latest)</strong>
+              โดยดำเนินการตามลำดับขั้นตอน (Steps) ดังนี้:
+            </p>
+            <ol class="steps-timeline">
+              <li>
+                <div class="step-num">1</div>
+                <div class="step-desc">
+                  <strong>Checkout source code:</strong> ดึงไฟล์โค้ดล่าสุดจาก Repository ลงมาไว้ในเครื่อง Runner
+                </div>
+              </li>
+              <li class="step-challenge">
+                <div class="step-num step-num-challenge">★</div>
+                <div class="step-desc">
+                  <strong>[Challenge Step] Verify index.html exists:</strong>
+                  ใช้ Shell command <code>test -f index.html</code> เพื่อตรวจสอบว่ามีไฟล์ <code>index.html</code>
+                  อยู่จริง หากไม่มีจะหยุดการทำงานและแจ้ง Error ทันที เพื่อป้องกันการ Deploy เว็บไซต์ที่พังหรือไม่สมบูรณ์
+                </div>
+              </li>
+              <li>
+                <div class="step-num">2</div>
+                <div class="step-desc">
+                  <strong>Setup Pages:</strong> เตรียมความพร้อมและอ่านการตั้งค่าของ GitHub Pages
+                </div>
+              </li>
+              <li>
+                <div class="step-num">3</div>
+                <div class="step-desc">
+                  <strong>Upload static website:</strong> แพ็กรวมไฟล์หน้าเว็บ (Path <code>'.'</code>) ขึ้นไปเป็น Pages
+                  Artifact
+                </div>
+              </li>
+              <li>
+                <div class="step-num">4</div>
+                <div class="step-desc">
+                  <strong>Deploy to GitHub Pages:</strong> นำ Artifact ดังกล่าวไปเผยแพร่เป็นเว็บไซต์ออนไลน์จริง
+                  พร้อมสร้าง URL ให้อัตโนมัติ
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>
+        © 2026 Developed by <span class="footer-highlight">Ratchcta Wongsakhu</span> (ID: 67160234)
+      </p>
+      <p class="footer-note">GitHub Pages &amp; GitHub Actions CI/CD Lab Demonstration</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
+
 </html>
